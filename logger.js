@@ -1,6 +1,10 @@
 var winston = require("winston");
   require("winston-azure-blob-transport");
- 
+
+  var _getBlobName = () => {
+    const currentDate = new Date().toISOString().split('T'); // 2011-10-05, 14:48:00.000Z
+    return `superbot-002/${currentDate[0]}/applicationLog.log`
+  };
   var logger = new (winston.Logger)({
     transports: [
       new (winston.transports.AzureBlob)({
@@ -10,7 +14,7 @@ var winston = require("winston");
         },
         containerName: "app-logs-rw",
         // blobName: "superbot-002",
-        nameResolver: { getBlobName: () => 'superbot-002' },
+        nameResolver: { getBlobName: _getBlobName },
         level: "info"
       })
     ]

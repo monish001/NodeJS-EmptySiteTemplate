@@ -10,6 +10,7 @@ var winston = require("winston");
         },
         containerName: "app-logs-rw",
         blobName: "superbot002",
+        nameResolver: { getBlobName: () => 'superbot002' },
         level: "info"
       })
     ]

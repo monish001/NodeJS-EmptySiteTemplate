@@ -10,7 +10,7 @@
     "node": "~0.10.0 || ~4.2.0"
   },
   "dependencies": {
-    "winston": "^3.1.0",
+    "winston": "^2.4.4",
     "winston-azure-blob-transport": "^0.2.9"
   }
 }

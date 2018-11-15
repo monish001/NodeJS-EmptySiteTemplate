@@ -9,8 +9,8 @@ var winston = require("winston");
           key: "u2WnCmjoo5VyWt5MsgA48u5cNnX853qJjLP8C9i3WkNV917QBWNxmEMoZKF1LjzftDTlaV7wivsL+Z86U0TGCA=="
         },
         containerName: "app-logs-rw",
-        blobName: "superbot002",
-        nameResolver: { getBlobName: () => 'superbot002' },
+        // blobName: "superbot-002",
+        nameResolver: { getBlobName: () => 'superbot-002' },
         level: "info"
       })
     ]
